@@ -1,38 +1,218 @@
-.App {
-  text-align: center;
+body{
+    background-color: ghostwhite;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu{
+    background-color: white;
+    height: 50px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px -10px 9px 12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -10px 9px 12px rgba(0,0,0,0.75);
+    box-shadow: 0px -10px 9px 12px rgba(0,0,0,0.75);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-menu, .center-menu, .right-menu{
+    display: flex;
+    align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.left-menu img{
+    width: 50px;
+    margin-right: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.left-menu input{
+    padding: 0px 20px;
+    outline: none;
+    border: none;
+    background-color: ghostwhite;
+    height: 50px;
+    border-radius: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right-menu img{
+    height: 30px;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+.right-menu .profile span{
+    text-align: center;
+    vertical-align: middle;
+}
+.right-menu .menu-btn{
+    padding: 0px 10px;
+}
+.right-menu .menu-btn div{
+    height: 50px;
+    width:50px;
+    background-color: ghostwhite;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-menu .profile{
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    border-radius: 10px;
+}
+.right-menu .profile:hover{
+    background-color: ghostwhite;
+}
+.right-menu .profile span{
+    font-weight: 500;
+}
+.center-menu .menu-btn{
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    color: rgb(53, 53, 53)
+}
+.center-menu .menu-btn:hover{
+    background-color: ghostwhite;
+}
+.center-menu .active{
+    border-bottom: 5px #8c52ff solid;
+    color: #8c52ff;
+}
+.left-side, .right-side{
+    width:300px;
+    height: 100px;
+}
+.home-page{
+    display: flex;
+}
+.home-page .newfeed{
+    flex-grow: 1;
+    width: 50px;
+    padding: 0px 50px;
+}
+.newfeed .box{
+    background-color: white;
+    margin: 30px 0px;
+    border-radius: 10px;
+    padding: 10px 50px;
+}
+.small-avatar{
+    height: 40px;
+    border-radius: 100%;
+}
+.newfeed .box .post-header{
+    display: flex;
+    align-items: center;
+}
+.newfeed .box .post-header .status-box{
+    flex-grow: 1;
+    margin-left: 10px;
+    background-color: ghostwhite;
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: grey
+}
+.newfeed .box .post-header .status-box:hover{
+    background-color: rgb(243, 243, 243);
+    cursor: pointer;
+}
+.newfeed .box .post-header .info{
+    flex-grow: 1;
+    padding: 0px 10px
+}
+.newfeed .box .post-header .info .name{
+    font-weight: 500;
+}
+.newfeed .box .post-header .info .time{
+    font-size: smaller;
+    color: grey;
+}
+.newfeed .box .post-header .config{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.newfeed .box .post-header .config:hover{
+    background-color: ghostwhite;
+    cursor: pointer;
+}
+.newfeed .box .post-body .status{
+    box-sizing: border-box;
+    word-break: break-all;
+}
+.newfeed .box .post-body .image img{
+    width:100%
+}
+.newfeed .box .post-body .likes{
+    display: flex;
+    padding: 3px;
+    justify-content: center;
+}
+.newfeed .box .post-body .likes:hover{
+    background-color: ghostwhite;
+    cursor: pointer;
+}
+.newfeed .box .post-body .likes div{
+    height: 20px;
+    width:20px;
+    background-color: #8c52ff;
+    font-size: 12px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.newfeed .box .post-body .likes span{
+    color: grey;
+    font-size: 15px;
+    margin-left: 5px;
+}
+.newfeed .box .post-body .action{
+    display: flex;
+    justify-content: center;
+}
+.newfeed .box .post-body .action .post-btn{
+    flex-grow: 1;
+    text-align: center;
+    background-color: ghostwhite;
+    margin: 0px 5px;
+    padding: 10px;
+    color: grey
+}
+.newfeed .box .post-body .action .post-btn:hover{
+    background-color: rgb(230, 230, 230);
+}
+.newfeed .box .post-body .comment .comment-box{
+    display: flex;
+}
+.newfeed .box .post-body .comment .comment-box textarea{
+    outline: none;
+    background-color: rgb(230, 230, 230);
+    border: none;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+    flex-grow:1 ;
+    margin-left: 10px;
+}
+.newfeed .box .post-body .comment, .newfeed .box .post-body .action{
+    margin: 0px 20px;
+    border-top: 1px solid grey;
+    padding: 10px 0px;
+}
+.newfeed .box .post-body .comment .comment-box button{
+    background: #8c52ff ;
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 10px;
+    height: 40px;
 }
